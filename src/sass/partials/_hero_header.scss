@@ -1,0 +1,299 @@
+.hero-header {
+  background-color: $SectionFirstColor;
+  overflow: hidden;
+  position: relative;
+  min-height: 502px;
+  @include tablet {
+    min-height: 399px;
+  }
+  @include desktop {
+    min-height: 665px;
+  }
+
+  &__container {
+    display: flex;
+    padding-top: 6px;
+    padding-left: 20px;
+    align-items: center;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    // margin: 0 auto;
+    @include tablet {
+      padding-top: 37px;
+      padding-left: 34px;
+      max-width: 768px;
+      justify-content: space-between;
+    }
+    @include desktop {
+      padding-left: 46px;
+      max-width: 1280px;
+    }
+  }
+  &__logo {
+    background-color: $SectionFirstColor;
+  }
+  &__wrapper {
+    display: none;
+    @include desktop {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+  &__navigation {
+    z-index: 1;
+  }
+  &__nav {
+    margin-left: 110px;
+    margin-right: 110px;
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+  }
+  &__nav-link {
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    line-height: 1.31;
+    color: $TextBtnSecondaryColor;
+  }
+  &__nav-link:hover,
+  &__nav-link:focus {
+    color: $TextFirstBtnPrimaryColor;
+    outline: none;
+  }
+
+  &__hamburger-icon {
+    stroke: $TextFirstBtnPrimaryColor;
+    &:hover {
+      stroke: $TextBtnSecondaryColor;
+    }
+  }
+  &__hamburger {
+    z-index: 1;
+    margin-left: 62px;
+    margin-right: 19px;
+    @include tablet {
+      margin-left: 291px;
+      margin-right: 30px;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__main-title {
+    max-width: 218px;
+    @include tablet {
+      max-width: 162px;
+    }
+    @include desktop {
+      max-width: 277px;
+    }
+  }
+  &__title {
+    position: relative;
+    margin-top: 137px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    max-width: 480px;
+    @include tablet {
+      position: relative;
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 34px 0 34px;
+      max-width: 768px;
+    }
+    @include desktop {
+      margin-top: 84px;
+      padding-left: 115px;
+      margin-left: auto;
+      // margin-right: 97px;
+      max-width: 1200px;
+    }
+  }
+  &__title-button {
+    margin-top: 19px;
+    gap: 8px;
+    @include desktop {
+      gap: 15px;
+    }
+  }
+  &__title-stats {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__main-img {
+    width: 346px;
+    height: 344px;
+    display: block;
+    background-color: $SectionSecondTextThirdColor;
+    border-radius: 50%;
+    position: absolute;
+    top: -250px;
+    // left: 36px;
+    right: -86px;
+    @include tablet {
+      width: 324px;
+      height: 322px;
+      top: -190px;
+      // left: 307px;
+      right: 137px;
+    }
+    @include desktop {
+      width: 538px;
+      height: 538px;
+      top: -317px;
+      // left: 475px;
+      right: 243px;
+      z-index: 0;
+    }
+  }
+  &__background-img {
+    position: absolute;
+    vertical-align: middle;
+    width: 171px;
+    height: auto;
+    left: 50%;
+    top: 9px;
+    transform: translateX(-50%);
+    @include tablet {
+      width: 143px;
+      right: 247px;
+      top: 32px;
+      transform: translateX(-65%);
+    }
+    @include desktop {
+      width: 236px;
+      right: 469px;
+      top: 55px;
+    }
+  }
+  &__promo {
+    position: relative;
+    display: flex;
+    // gap: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // @include tablet {
+    //   min-width: 768px;
+    //   max-width: 1279px;
+    // }
+    // @include desktop {
+    //   max-width: 1280px;
+    // }
+  }
+  &__promo-left {
+    position: relative;
+    display: flex;
+    gap: 10px;
+  }
+  &__promo-right {
+    position: relative;
+    gap: 10px;
+    // top: -118px;
+    right: -145px;
+    @include tablet {
+      right: 5px;
+      top: -70px;
+    }
+    @include desktop {
+      right: -10px;
+      top: -116px;
+    }
+  }
+  &__promo-box {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__promo-box-img {
+    @include tablet {
+      display: block;
+      position: absolute;
+      width: 124px;
+      height: auto;
+      // left: 35px;
+      right: 610px;
+      top: 19px;
+    }
+    @include desktop {
+      width: 188px;
+      height: auto;
+      // left: 77px;
+      right: 1015px;
+      top: 56px;
+    }
+  }
+  &__promo-description {
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+  &__promo-description-text {
+    display: none;
+    @include tablet {
+      display: flex;
+      width: 114px;
+      margin: 66px 500px 7px 154px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 150%;
+      color: $TextBtnSecondaryColor;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+    @include desktop {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: $TextBtnSecondaryColor;
+      flex-wrap: wrap;
+      text-align: left;
+      width: 200px;
+      margin: 112px 785px 20px 295px;
+    }
+  }
+  &__promo-description-button {
+    @include desktop {
+      margin-left: 140px;
+    }
+  }
+  &__promo-girl {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__promo-girl-img {
+    @include tablet {
+      display: block;
+      position: absolute;
+      width: 168px;
+      height: auto;
+      // left: 566px;
+      right: 34px;
+      top: 42px;
+    }
+    @include desktop {
+      width: 293px;
+      height: auto;
+      top: 64px;
+      // left: 878px;
+      right: 106px;
+    }
+  }
+}

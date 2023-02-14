@@ -1,0 +1,36 @@
+* {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  font-family: $DefaultFontFamily;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 480px;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    min-width: 1200px;
+    max-width: 1280px;
+  }
+}
